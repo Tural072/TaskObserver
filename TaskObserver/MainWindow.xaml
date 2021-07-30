@@ -1,0 +1,32 @@
+﻿<Window x:Class="TaskObserver.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TaskObserver"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <Label FontSize="20">Name</Label>
+            <TextBox FontSize="30"></TextBox>
+            <Label FontSize="20">Email</Label>
+            <TextBox FontSize="30"></TextBox>
+            <CheckBox > </CheckBox>
+            <Button Content="Add" FontSize="40" Margin="30"></Button>
+        </StackPanel>
+        <Grid Grid.Column="1">
+            <Button Width="200" 
+                    Height="50" 
+                    HorizontalAlignment="Right" 
+                    VerticalAlignment="Bottom" 
+                    Margin="10"
+                    Content="Notify All"
+                    Click="Button_Click"></Button>
+        </Grid>
+    </Grid>
+</Window>
