@@ -6,27 +6,31 @@
         xmlns:local="clr-namespace:TaskObserver"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid Background="AliceBlue">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <StackPanel>
-            <Label FontSize="20">Name</Label>
-            <TextBox FontSize="30"></TextBox>
-            <Label FontSize="20">Email</Label>
-            <TextBox FontSize="30"></TextBox>
-            <CheckBox > </CheckBox>
-            <Button Content="Add" FontSize="40" Margin="30"></Button>
+            <Label FontSize="20">Product Name</Label>
+            <TextBox FontSize="30" Name="nameTxtb" Template="{StaticResource TextBoxBaseControlTemplate}"></TextBox>
+            <Label FontSize="20">Customer Email</Label>
+            <TextBox FontSize="30" Name="mailTxtb" Template="{StaticResource TextBoxBaseControlTemplate}"></TextBox>
+            <Button Style="{StaticResource InformButton}" Content="Add" FontSize="40" Margin="30" Click="Button_Click_1"></Button>
         </StackPanel>
         <Grid Grid.Column="1">
+            <StackPanel>
+                <ListBox Height="345" Width="380" Name="MainListbox" BorderThickness="0" FontSize="20"></ListBox>
             <Button Width="200" 
                     Height="50" 
                     HorizontalAlignment="Right" 
                     VerticalAlignment="Bottom" 
                     Margin="10"
                     Content="Notify All"
-                    Click="Button_Click"></Button>
+                    Click="Button_Click"
+                    Style="{StaticResource InformButton}"
+                    FontSize="30"></Button>
+            </StackPanel>
         </Grid>
     </Grid>
 </Window>

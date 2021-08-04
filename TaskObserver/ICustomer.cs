@@ -9,6 +9,7 @@ namespace TaskObserver
     public interface ICustomer
     {
         string ProductName { get; set; }
+        string CustomerEmail { get; set; }
         void GetMessage();
     }
     
